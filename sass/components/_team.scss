@@ -1,0 +1,52 @@
+.team__section-title {
+  margin-bottom: 44px;
+}
+
+.team__list {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin: -15px;
+  }
+}
+
+.team__item {
+  width: 100%;
+  background: #f7f7f7;
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
+}
+
+.team__image {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.team__pre-text {
+  margin-bottom: 20px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: rgba(157, 164, 189, 0.6);
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+}
+
+.team__name {
+  @include text(400, 18px, 1.39, 0.02em, $title-text-color);
+  margin-bottom: 8px;
+}
+
+.team__profession {
+  @include text(400, 14px, 1.36, 0.02em, #ff6c00);
+  margin-bottom: 30px;
+}
