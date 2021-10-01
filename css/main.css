@@ -41,14 +41,14 @@ body {
   margin: 0 auto;
   outline: 1px dotted red;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
   }
 }
-@media screen and (min-width: 690px) {
+@media screen and (min-width: 768px) {
   .container {
-    width: 690px;
+    width: 768px;
     padding-left: 39px;
     padding-right: 39px;
   }
@@ -65,7 +65,7 @@ body {
   padding-top: 84px;
   padding-bottom: 84px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .section {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -146,8 +146,63 @@ body {
 }
 
 .header {
+  position: absolute;
+  width: 100%;
   color: #ffffff;
-  background-color: cadetblue;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 60px;
+}
+
+.nav-site {
+  display: flex;
+}
+
+.nav-site__list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-site__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.nav-site__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.nav-site__link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+.nav-site__link:hover, .nav-site__link:focus {
+  color: #ff6c00;
+}
+
+.contacts {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    width: 162px;
+    display: block;
+    margin-left: auto;
+    text-align: center;
+  }
 }
 
 .btn {
@@ -259,7 +314,7 @@ body {
   }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .about-us__container {
     display: flex;
   }
@@ -267,7 +322,7 @@ body {
 .about-us__container .about__thumb {
   display: none;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .about-us__container .about__thumb {
     width: 330px;
     display: block;
@@ -294,7 +349,7 @@ body {
 .about-us__container .about__content {
   width: 100%;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .about-us__container .about__content {
     width: 330px;
   }
@@ -360,7 +415,7 @@ body {
   color: #9da4bd;
   flex-shrink: 0;
 }
-@media screen and (min-width: 690px) {
+@media screen and (min-width: 768px) {
   .services__text {
     font-size: 18px;
     line-height: 1.67;
@@ -378,7 +433,7 @@ body {
   padding: 30px;
   margin-bottom: 50px;
 }
-@media screen and (min-width: 690px) {
+@media screen and (min-width: 768px) {
   .services__wrapper {
     padding: 30px 40px;
   }
@@ -418,7 +473,7 @@ body {
 .features__content {
   width: 100%;
 }
-@media screen and (min-width: 690px) {
+@media screen and (min-width: 768px) {
   .features__content {
     width: 500px;
   }
@@ -437,9 +492,10 @@ body {
 .features__list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
+  margin-right: -30px;
+  margin-top: -30px;
 }
-@media screen and (min-width: 690px) {
+@media screen and (min-width: 768px) {
   .features__list {
     width: 450px;
     align-self: end;
@@ -457,13 +513,19 @@ body {
   width: 100%;
   padding: 20px 36px;
   margin-bottom: 15px;
+  text-align: center;
   background: #f7f7f7;
 }
 @media screen and (min-width: 480px) {
   .features__item {
-    width: calc((100% - 4 * 15px) / 2);
+    width: calc((100% - 60px) / 2);
     height: 133px;
-    margin: 15px;
+  }
+  .features__item:nth-child(even) {
+    margin-top: 30px;
+  }
+  .features__item:nth-child(odd) {
+    margin-right: 30px;
   }
 }
 
@@ -475,6 +537,14 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+}
+.features__topic--first::after {
+  content: "+";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ff6c00;
+  vertical-align: top;
 }
 
 .features__topic--second {
@@ -490,7 +560,12 @@ body {
 }
 
 .features__section-subtitle {
-  margin-bottom: 44px;
+  margin-bottom: 74px;
+}
+@media screen and (min-width: 1200px) {
+  .features__section-subtitle {
+    margin-bottom: 0;
+  }
 }
 
 .team__section-title {
@@ -509,8 +584,10 @@ body {
   background: #f7f7f7;
   text-align: center;
 }
-.team__item:not(:last-child) {
-  margin-bottom: 64px;
+@media screen and (max-width: 1199px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 64px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
@@ -580,7 +657,7 @@ body {
   color: #303030;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .portfolio__list {
     display: flex;
     flex-wrap: wrap;
@@ -601,7 +678,7 @@ body {
 .portfolio__item:not(:last-child) {
   margin-bottom: 30px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .portfolio__item {
     flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
@@ -630,7 +707,7 @@ body {
 .online {
   text-align: center;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .online {
     text-align: left;
   }
@@ -646,7 +723,7 @@ body {
   color: #ffffff;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .online__form {
     display: flex;
     flex-wrap: wrap;
@@ -710,7 +787,7 @@ body {
   transition: color 500ms linear;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .online__input {
     width: 290px;
     margin-bottom: 33px;
@@ -729,7 +806,7 @@ body {
   resize: none;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .online__btn {
     margin: 0 auto;
   }
@@ -756,7 +833,7 @@ body {
   -moz-text-align-last: left;
        text-align-last: left;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .address {
     display: flex;
   }
@@ -770,7 +847,7 @@ body {
 .address__list {
   margin-bottom: 44px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .address__list {
     width: 330px;
     margin-right: 30px;
@@ -817,7 +894,7 @@ body {
   padding-top: 44px;
   padding-bottom: 44px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .footer {
     flex-direction: row;
     align-items: baseline;

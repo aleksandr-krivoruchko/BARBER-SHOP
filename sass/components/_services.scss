@@ -26,7 +26,7 @@
 .services__text {
   @include text(400, 14px, 2.14, 0.02em, $text-accent-second-color);
   flex-shrink: 0;
-  @media screen and (min-width: 690px) {
+  @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 1.67;
   }
@@ -43,7 +43,7 @@
   padding: 30px;
   margin-bottom: 50px;
 
-  @media screen and (min-width: 690px) {
+  @media screen and (min-width: 768px) {
     padding: 30px 40px;
   }
   @media screen and (min-width: 1200px) {

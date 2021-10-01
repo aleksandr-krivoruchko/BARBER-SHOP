@@ -13,8 +13,11 @@
   width: 100%;
   background: #f7f7f7;
   text-align: center;
-  &:not(:last-child) {
-    margin-bottom: 64px;
+
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
   }
 
   @media screen and (min-width: 1200px) {
