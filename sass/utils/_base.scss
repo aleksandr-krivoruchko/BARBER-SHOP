@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
   outline: 1px dotted red;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 450px) {
     width: 480px;
   }
   @media screen and (min-width: 690px) {
@@ -42,6 +42,29 @@ body {
 .pre-text {
   @include text(600, 11px, 1.36, 0.1em, $main-text-color);
   text-transform: uppercase;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: $title-text-color;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+}
+
+.pre-text--gray {
+  @include text(600, 11px, 1.36, 0.1em, $main-text-color);
+  text-transform: uppercase;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: rgba(157, 164, 189, 0.6);
+    vertical-align: middle;
+    margin-right: 20px;
+  }
 }
 
 .section-title {

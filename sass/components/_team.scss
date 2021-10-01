@@ -30,15 +30,7 @@
 
 .team__pre-text {
   margin-bottom: 20px;
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 60px;
-    height: 1px;
-    background: rgba(157, 164, 189, 0.6);
-    vertical-align: middle;
-    margin-right: 20px;
-  }
+  line-height: 1.91;
 }
 
 .team__name {
