@@ -1,44 +1,34 @@
 .about-us__container {
-  @media screen and(min-width:768px) {
+  display: flex;
+}
+
+.about-us__thumb {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-right: 30px;
+  }
+
+  @media screen and(min-width:1200px) {
     display: flex;
+    margin-right: 64px;
   }
+}
 
-  .about__thumb {
-    display: none;
+.about__item + .about__item {
+  margin-top: 30px;
+  @media screen and (min-width: 1200px) {
+    margin: 0;
 
-    @media screen and(min-width:768px) {
-      width: 330px;
-      display: block;
-      margin-right: 30px;
-    }
-
-    @media screen and(min-width:1200px) {
-      width: 570px;
-      display: flex;
-      justify-content: space-between;
-      margin-right: 64px;
-    }
+    margin-left: 30px;
   }
+}
 
-  .about__img:first-child {
-    margin-bottom: 30px;
-
-    @media screen and(min-width:1200px) {
-      margin-bottom: 0;
-      margin-right: 30px;
-    }
-  }
-
-  .about__content {
-    width: 100%;
-
-    @media screen and(min-width:768px) {
-      width: 330px;
-    }
-
-    @media screen and(min-width:1200px) {
-      width: 490px;
-    }
+.about__content {
+  max-width: 330px;
+  @media screen and (min-width: 1200px) {
+    max-width: 500px;
   }
 }
 
@@ -48,7 +38,12 @@
 }
 
 .about__section-title {
+  font-size: 28px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 42px;
+  }
 }
 
 .about__section-subtitle {
@@ -57,5 +52,5 @@
 
 .about__text {
   @include text(400, 14px, 1.86, 0.02em, $main-text-color);
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }

@@ -1,11 +1,24 @@
 .contacts-wrapper {
   background: #191c26;
-  background-image: url(../images/contacts-bg.png);
-  background-size: 50% auto;
-  background-position: center;
+  background-image: url(/img/contacts/contactsBg-mob.png);
   background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: center bottom;
+
+  @media screen and (min-width: 600px) {
+    background-image: url(/img/contacts/contactsBg-tab.png);
+  }
+
   @media screen and (min-width: 1200px) {
-    display: flex;
+    background-image: url(/img/contacts/contactsBg-desk.png);
+    background-size: 50% auto;
+    background-position: right center;
+  }
+
+  .container {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 }
 

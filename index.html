@@ -21,9 +21,14 @@
     <!-- !............HEADER............ -->
     <header class="header">
       <section class="header">
+        
         <div class="header__container container">
           <nav class="nav-site">
-            <a class="logo" href=""><img src="./img/Logo.svg" alt="logo" /></a>
+            <a href="" class="logo">
+              <svg class="logo__icon" width="67" height="56">
+                <use href="./img/icons.svg#icon-logo"></use>
+              </svg>
+            </a>
             <ul class="nav-site__list">
               
               <li class="nav-site__item">
@@ -44,6 +49,11 @@
             <a class="nav-site__link header__tel" href="tel:+380441111111">+38 044 111 11 11</a>
             <button class="btn btn--whitecolor" type="button">онлайн-запись</button>
           </div>
+          <button class="btn__menu" type="button">
+            <svg  width="40" height="40">
+              <use href="./img/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
         </div>
       </section>
     </header>
@@ -82,20 +92,31 @@
 
       <section class="about-us">
         <div class="container section about-us__container">
-          <div class="about__thumb">
-            <img class="about__img"
-              src="./img/us1.jpg"
-              alt="Бритье бороды"
-              width="270"
-              height="445"
-            />
-            <img class="about__img"
-              src="./img/us2.jpg"
-              alt="Мужская стрижка"
-              width="270"
-              height="445"
-            />
-          </div>
+          <ul class="about__thumb">
+            <li class="about__item">
+              <picture class="about__photo">
+                <source srcset="./img/about/1about-desk.jpg 1x, ./img/about/1about-desk@2x.jpg 2x" media="(min-width:1200px)" />
+              
+                <source srcset="./img/about/1about-tab.jpg 1x, ./img/about/1about-tab@2x.jpg 2x" media="(min-width:768px)" />
+              
+                <img src="./img/about/1about-tab.jpg" alt="Бритье бороды"/>
+              </picture>
+            </li>
+
+            <li class="about__item">
+              <picture class="about__photo">
+                <source srcset="./img/about/2about-desk.jpg 1x,
+                             ./img/about/2about-desk@2x.jpg 2x" media="(min-width:1200px)" />
+              
+                <source srcset="./img/about/2about-tab.jpg 1x,
+                             ./img/about/2about-tab@2x.jpg 2x" media="(min-width:768px)" />
+              
+                <img src="./img/about/2about-desk.jpg" alt="Бритье бороды" />
+              </picture>
+            </li>
+          </ul>
+          
+
           <div class="about__content">
             <p class="pre-text about__pre-text">О НАС</p>
             <h2 class="section-title about__section-title">Лучший Барбершоп твоего города</h2>
@@ -217,7 +238,8 @@
           <h2 class="section-title team__section-title">Наши мастера</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img class="team__image" src="./img/master1.jpg" alt="Мастер бритья" />
+              
+              <img class="team__image" src="./img/masters/master1.jpg" alt="Мастер бритья" />
               <h3 lang="en" class="team__name">John Smith</h3>
               <p lang="en" class="team__profession">Extreme Barber</p>
               <ul class="social">
@@ -249,7 +271,7 @@
               </ul>
             </li>
             <li class="team__item">
-              <img class="team__image" src="./img/master2.jpg" alt="Мастер стрижки" />
+              <img class="team__image" src="./img/masters/master2.jpg" alt="Мастер стрижки" />
               <h3 lang="en" class="team__name">Michele Doe</h3>
               <p lang="en" class="team__profession">Extreme Barber</p>
               <ul class="social">
@@ -278,7 +300,7 @@
               </ul>
             </li>
             <li class="team__item">
-              <img class="team__image" src="./img/master3.jpg" alt="Мастер укладки" />
+              <img class="team__image" src="./img/masters/master3.jpg" alt="Мастер укладки" />
               <h3 lang="en" class="team__name">Alan Black</h3>
               <p lang="en" class="team__profession">Extreme Barber</p>
               <ul class="social">
@@ -322,63 +344,61 @@
           <p class="pre-text portfolio__pre-text">На латинском языке “барба” означает “борода”</p>
           <ul class="portfolio__list">
             <li class="portfolio__item">
-              <img class="portfolio__img" src="./img/foto1.jpg" alt="foto-first" /></li>
+              
+              <img class="portfolio__img" src="./img/portfolio/foto1.jpg" alt="foto-first" /></li>
             <li class="portfolio__item">
-              <img src="./img/foto2.jpg" alt="foto-second" />
+              <img src="./img/portfolio/foto2.jpg" alt="foto-second" />
             </li>
-            <li class="portfolio__item"><img src="./img/foto3.jpg" alt="foto-third" /></li>
-            <li class="portfolio__item"><img src="./img/foto4.jpg" alt="foto-fifth" /></li>
+            <li class="portfolio__item"><img src="./img/portfolio/foto3.jpg" alt="foto-third" /></li>
+            <li class="portfolio__item"><img src="./img/portfolio/foto4.jpg" alt="foto-fifth" /></li>
           </ul>
         </div>
       </section>
 
       <!-- ONLINE+CONTACTS -->
 
-      <div class="contacts-wrapper container">
-
-        <section class="online section ">
-          <h2 class="section-title online__section-title">Онлайн-запись</h2>
-          <form action="#" class="online__form">
-            <input class="online__input" type="text" name="name" placeholder="Имя*">
-            <input class="online__input" type="tel" name="phone" placeholder="Телефон*">
-            <textarea class="online__textarea" name="message" placeholder="сообщение" width="100%" height="75px"></textarea>
-          </form>
-          <button class="btn btn--whitecolor online__btn" type="button">отправить</button>
-        </section>
-
-
-        <section class="contacts section">
-          <h2 class="section-title contacts__section-title">Контакты</h2>
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <a class="address__link"
-                  href="https://goo.gl/maps/LsAVbqvdVWrLiE6S9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><svg class="address__icon" width="24" height="24">
-                    <use href="./img/icons.svg#icon-map-pin"></use>
-                  </svg><span>ул. Васильковская, 7А <br/>Киев, 08132</span></a
-                >
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="tel:++380441111111">
-                  <svg class="address__icon" width="24" height="24">
-                <use href="./img/icons.svg#icon-phone"></use>
-              </svg>+38 044 111 11 11</a>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:barbershop@email.com"><svg class="address__icon" width="24" height="24">
-                  <use href="./img/icons.svg#icon-mail"></use>
-                </svg>barbershop@email.com</a>
-              </li>
-            </ul>
-            <div class="address__thumb">
-              <p class="pre-text address__pre-text">время работы</p>
-              <p class="address__time">Ежедневно с 9:00 до 22:00</p>
-            </div>
-          </address>
-        </section>
+      <div class="contacts-wrapper">
+        <div class="container">
+          <section class="online section ">
+            <h2 class="section-title online__section-title">Онлайн-запись</h2>
+            <form action="#" class="online__form">
+              <input class="online__input" type="text" name="name" placeholder="Имя*">
+              <input class="online__input" type="tel" name="phone" placeholder="Телефон*">
+              <textarea class="online__textarea" name="message" placeholder="сообщение" width="100%" height="75px"></textarea>
+            </form>
+            <button class="btn btn--whitecolor online__btn" type="button">отправить</button>
+          </section>
+          
+          
+          <section class="contacts section">
+            <h2 class="section-title contacts__section-title">Контакты</h2>
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a class="address__link" href="https://goo.gl/maps/LsAVbqvdVWrLiE6S9" target="_blank"
+                    rel="noopener noreferrer"><svg class="address__icon" width="24" height="24">
+                      <use href="./img/icons.svg#icon-map-pin"></use>
+                    </svg><span>ул. Васильковская, 7А <br />Киев, 08132</span></a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel:++380441111111">
+                    <svg class="address__icon" width="24" height="24">
+                      <use href="./img/icons.svg#icon-phone"></use>
+                    </svg>+38 044 111 11 11</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:barbershop@email.com"><svg class="address__icon" width="24" height="24">
+                      <use href="./img/icons.svg#icon-mail"></use>
+                    </svg>barbershop@email.com</a>
+                </li>
+              </ul>
+              <div class="address__thumb">
+                <p class="pre-text address__pre-text">время работы</p>
+                <p class="address__time">Ежедневно с 9:00 до 22:00</p>
+              </div>
+            </address>
+          </section>
+        </div>
       </div>
     </main>
 

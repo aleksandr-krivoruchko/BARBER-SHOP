@@ -26,7 +26,7 @@ a {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -145,6 +145,27 @@ body {
   margin: -1px;
 }
 
+.logo {
+  margin-right: 60px;
+  padding-left: 10px;
+  margin-top: -20px;
+}
+
+.logo__icon {
+  fill: #fff;
+}
+@media screen and (min-width: 768px) {
+  .logo__icon {
+    fill: #303030;
+  }
+}
+
+.btn__menu {
+  fill: #fff;
+  background-color: transparent;
+  border: none;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -154,7 +175,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 52px;
+    padding-top: 42px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -165,12 +186,7 @@ body {
 
 .header__container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.logo {
-  margin-right: 60px;
 }
 
 .nav-site {
@@ -183,7 +199,6 @@ body {
 @media screen and (min-width: 768px) {
   .nav-site__list {
     display: flex;
-    align-items: flex-start;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -217,6 +232,7 @@ body {
     margin-left: auto;
     text-align: center;
     padding-right: 2px;
+    margin-top: -10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -267,32 +283,44 @@ body {
   display: flex;
 }
 
-.hero__left {
-  width: 15%;
-  padding-top: 300px;
-  background-color: chartreuse;
-}
-
 .hero__main {
   width: 100%;
   padding-top: 208px;
   padding-bottom: 183px;
-  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../img/hero-image.jpg);
+  background: rgba(25, 28, 38, 0.2);
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(/img/hero/hero-mob.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero__main {
-    padding-top: 280px;
-    padding-bottom: 206px;
-    padding-left: 70px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/hero/hero-mob@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero__main {
+    padding-top: 280px;
+    padding-bottom: 183px;
+    padding-left: 70px;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(/img/hero/hero-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__main {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/hero/hero-tab@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__main {
     padding-top: 272px;
     padding-left: 95px;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(/img/hero/hero-desk.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__main {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/hero/hero-desk@2x.jpg);
   }
 }
 
@@ -301,18 +329,18 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero__left {
-    display: block;
-    justify-content: center;
-    align-items: end;
-    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 85px;
     height: 680px;
-    padding-bottom: 140px;
+    padding-bottom: 170px;
   }
 }
 
 .hero__list {
   display: flex;
-  justify-content: end;
   align-items: center;
   transform: rotate(-90deg);
 }
@@ -381,49 +409,42 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .about-us__container {
-    display: flex;
-  }
+.about-us__container {
+  display: flex;
 }
-.about-us__container .about__thumb {
+
+.about-us__thumb {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .about-us__container .about__thumb {
-    width: 330px;
+  .about-us__thumb {
     display: block;
     margin-right: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .about-us__container .about__thumb {
-    width: 570px;
+  .about-us__thumb {
     display: flex;
-    justify-content: space-between;
     margin-right: 64px;
   }
 }
-.about-us__container .about__img:first-child {
-  margin-bottom: 30px;
+
+.about__item + .about__item {
+  margin-top: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .about-us__container .about__img:first-child {
-    margin-bottom: 0;
-    margin-right: 30px;
+  .about__item + .about__item {
+    margin: 0;
+    margin-left: 30px;
   }
 }
-.about-us__container .about__content {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .about-us__container .about__content {
-    width: 330px;
-  }
+
+.about__content {
+  max-width: 330px;
 }
 @media screen and (min-width: 1200px) {
-  .about-us__container .about__content {
-    width: 490px;
+  .about__content {
+    max-width: 500px;
   }
 }
 
@@ -433,7 +454,13 @@ body {
 }
 
 .about__section-title {
+  font-size: 28px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .about__section-title {
+    font-size: 42px;
+  }
 }
 
 .about__section-subtitle {
@@ -446,7 +473,7 @@ body {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .services {
@@ -666,7 +693,9 @@ body {
 }
 
 .team__image {
-  width: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -762,13 +791,25 @@ body {
 
 .contacts-wrapper {
   background: #191c26;
-  background-image: url(../images/contacts-bg.png);
-  background-size: 50% auto;
-  background-position: center;
+  background-image: url(/img/contacts/contactsBg-mob.png);
   background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: center bottom;
+}
+@media screen and (min-width: 600px) {
+  .contacts-wrapper {
+    background-image: url(/img/contacts/contactsBg-tab.png);
+  }
 }
 @media screen and (min-width: 1200px) {
   .contacts-wrapper {
+    background-image: url(/img/contacts/contactsBg-desk.png);
+    background-size: 50% auto;
+    background-position: right center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-wrapper .container {
     display: flex;
   }
 }
