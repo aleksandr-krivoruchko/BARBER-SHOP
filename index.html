@@ -343,14 +343,42 @@
           <h2 class="visually-hidden " >Портфолио</h2>
           <p class="pre-text portfolio__pre-text">На латинском языке “барба” означает “борода”</p>
           <ul class="portfolio__list">
+
             <li class="portfolio__item">
-              
-              <img class="portfolio__img" src="./img/portfolio/foto1.jpg" alt="foto-first" /></li>
+              <picture class="portfolio__img">
+					  <source srcset="./img/portfolio/1-desk.jpg 1x, ./img/portfolio/1-desk@2x.jpg 2x" media="(min-width:1200px)">
+					  <source srcset="./img/portfolio/1-tab.jpg 1x, ./img/portfolio/1-tab@2x.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/1-mob.jpg 1x, ./img/portfolio/1-mob@2x.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/1-mob.jpg" alt="foto-first" />
+				  </picture>
+				</li>
+
             <li class="portfolio__item">
-              <img src="./img/portfolio/foto2.jpg" alt="foto-second" />
+					<picture class="portfolio__img">
+					  <source srcset="./img/portfolio/2-desk.jpg 1x, ./img/portfolio/2-desk@2x.jpg 2x" media="(min-width:1200px)">
+					  <source srcset="./img/portfolio/2-tab.jpg 1x, ./img/portfolio/2-tab@2x.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/2-mob.jpg 1x, ./img/portfolio/2-mob@2x.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/2-mob.jpg" alt="foto-second" />
+				  </picture>
             </li>
-            <li class="portfolio__item"><img src="./img/portfolio/foto3.jpg" alt="foto-third" /></li>
-            <li class="portfolio__item"><img src="./img/portfolio/foto4.jpg" alt="foto-fifth" /></li>
+
+            <li class="portfolio__item">
+					<picture class="portfolio__img">
+					  <source srcset="./img/portfolio/3-desk.jpg 1x, ./img/portfolio/3-desk@2x.jpg 2x" media="(min-width:1200px)">
+					  <source srcset="./img/portfolio/3-tab.jpg 1x, ./img/portfolio/3-tab@2x.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/3-mob.jpg 1x, ./img/portfolio/3-mob@2x.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/3-mob.jpg" alt="foto-third" />
+				  </picture>
+				</li>
+
+            <li class="portfolio__item">
+					<picture class="portfolio__img">
+					  <source srcset="./img/portfolio/4-desk.jpg 1x, ./img/portfolio/4-desk@2x.jpg 2x" media="(min-width:1200px)">
+					  <source srcset="./img/portfolio/4-tab.jpg 1x, ./img/portfolio/4-tab@2x.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/4-mob.jpg 1x, ./img/portfolio/4-mob@2x.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/4-mob.jpg" alt="foto-fifth" />
+				  </picture>
+				</li>
           </ul>
         </div>
       </section>
