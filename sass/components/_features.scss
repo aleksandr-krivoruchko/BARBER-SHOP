@@ -1,7 +1,7 @@
 .features__container {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     flex-direction: row-reverse;
   }
 }
@@ -15,7 +15,7 @@
     width: 450px;
     margin-left: auto;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     width: 370px;
     margin-left: 100px;
     margin-right: 130px;
@@ -41,7 +41,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     padding: 20px 20px;
   }
 }
@@ -92,7 +92,7 @@
   margin-bottom: 44px;
   font-size: 18px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 0;
   }
 }

@@ -11,10 +11,14 @@
   }
 }
 
-.btn__menu {
+.menu-toggle {
+  padding-top: 48px;
   fill: #fff;
   background-color: transparent;
   border: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .header {
@@ -26,7 +30,7 @@
   @media screen and (min-width: 768px) {
     padding-top: 42px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     padding-top: 48px;
   }
 }
@@ -46,7 +50,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     align-items: center;
   }
 }
@@ -75,7 +79,7 @@
     padding-right: 2px;
     margin-top: -10px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     flex-direction: row;
     align-items: baseline;
   }
@@ -85,7 +89,7 @@
   @media screen and (min-width: 768px) {
     margin-top: 20px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-right: 40px;
   }
 }

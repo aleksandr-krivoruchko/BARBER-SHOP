@@ -9,14 +9,14 @@
     background-image: url(/img/contacts/contactsBg-tab.png);
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     background-image: url(/img/contacts/contactsBg-desk.png);
     background-size: 50% auto;
     background-position: right center;
   }
 
   .container {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       display: flex;
     }
   }
@@ -28,7 +28,7 @@
   @media screen and (min-width: 768px) {
     text-align: left;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     width: 50%;
   }
 }

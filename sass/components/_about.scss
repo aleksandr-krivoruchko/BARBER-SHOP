@@ -1,8 +1,8 @@
-.about-us__container {
+.about__container {
   display: flex;
 }
 
-.about-us__thumb {
+.about__thumb {
   display: none;
 
   @media screen and (min-width: 768px) {
@@ -10,7 +10,7 @@
     margin-right: 30px;
   }
 
-  @media screen and(min-width:1200px) {
+  @media screen and (min-width: 1280px) {
     display: flex;
     margin-right: 64px;
   }
@@ -18,16 +18,16 @@
 
 .about__item + .about__item {
   margin-top: 30px;
-  @media screen and (min-width: 1200px) {
-    margin: 0;
 
+  @media screen and (min-width: 1280px) {
+    margin: 0;
     margin-left: 30px;
   }
 }
 
 .about__content {
   max-width: 330px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     max-width: 500px;
   }
 }
@@ -41,7 +41,7 @@
   font-size: 28px;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 42px;
   }
 }
@@ -52,5 +52,5 @@
 
 .about__text {
   @include text(400, 14px, 1.86, 0.02em, $main-text-color);
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }

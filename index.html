@@ -49,16 +49,78 @@
             <a class="nav-site__link header__tel" href="tel:+380441111111">+38 044 111 11 11</a>
             <button class="btn btn--whitecolor" type="button">онлайн-запись</button>
           </div>
-          <button class="btn__menu" type="button">
-            <svg  width="40" height="40">
-              <use href="./img/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
+          
+			 <button
+          type="button"
+          class="menu-toggle is-open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="site-nav__icon-menu"
+              href="./img/icons.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
         </div>
       </section>
     </header>
     <main>
       <!-- !...........MAIN................... -->
+
+		<!--   MOBILE MENU   -->
+
+      <!-- <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-toggle is-open js-close-menu">
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="site-nav__icon-close"
+              href="./img/icons.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+        <nav class="mob-nav">
+          <ul class="mob-nav__list">
+            <li class="mob-nav__item">
+              <a class="mob-nav__link current" href="./index.html">О нас</a>
+            </li>
+            <li class="mob-nav__item">
+              <a class="mob-nav__link" href="./portfolio.html">Услуги и цены</a>
+            </li>
+            <li class="mob-nav__item">
+              <a class="mob-nav__link" href="">Мастера</a>
+            </li>
+				<li class="mob-nav__item">
+              <a class="mob-nav__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        
+          <ul class="mob-social">
+            <li class="mob-social__item">
+              <a class="mob-social__link" href="http://">Instagram</a>
+            </li>
+            <li class="mob-social__item">
+              <a class="mob-social__link" href="http://">Twitter</a>
+            </li>
+            <li class="mob-social__item">
+              <a class="mob-social__link" href="http://">Facebook</a>
+            </li>
+            <li class="mob-social__item">
+              <a class="mob-social__link" href="http://">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
 
       <!-- HERO -->
 
@@ -90,28 +152,28 @@
 
       <!-- ABOUT US -->
 
-      <section class="about-us">
-        <div class="container section about-us__container">
+      <section class="about">
+        <div class="container section about__container">
           <ul class="about__thumb">
             <li class="about__item">
               <picture class="about__photo">
-                <source srcset="./img/about/1about-desk.jpg 1x, ./img/about/1about-desk@2x.jpg 2x" media="(min-width:1200px)" />
+                <source srcset="./img/about/1about-desk-min.jpg 1x, ./img/about/1about-desk@2x-min.jpg 2x" media="(min-width:1280px)" />
               
-                <source srcset="./img/about/1about-tab.jpg 1x, ./img/about/1about-tab@2x.jpg 2x" media="(min-width:768px)" />
+                <source srcset="./img/about/1about-tab-min.jpg 1x, ./img/about/1about-tab@2x-min.jpg 2x" media="(min-width:768px)" />
               
-                <img src="./img/about/1about-tab.jpg" alt="Бритье бороды"/>
+                <img src="./img/about/1about-tab-min.jpg" alt="Бритье бороды"/>
               </picture>
             </li>
 
             <li class="about__item">
               <picture class="about__photo">
-                <source srcset="./img/about/2about-desk.jpg 1x,
-                             ./img/about/2about-desk@2x.jpg 2x" media="(min-width:1200px)" />
+                <source srcset="./img/about/2about-desk-min.jpg 1x,
+                             ./img/about/2about-desk@2x-min.jpg 2x" media="(min-width:1280px)" />
               
-                <source srcset="./img/about/2about-tab.jpg 1x,
-                             ./img/about/2about-tab@2x.jpg 2x" media="(min-width:768px)" />
+                <source srcset="./img/about/2about-tab-min.jpg 1x,
+                             ./img/about/2about-tab@2x-min.jpg 2x" media="(min-width:768px)" />
               
-                <img src="./img/about/2about-desk.jpg" alt="Бритье бороды" />
+                <img src="./img/about/2about-desk-min.jpg" alt="Бритье бороды" />
               </picture>
             </li>
           </ul>
@@ -233,13 +295,18 @@
       <!-- OUR TEAM -->
 
       <section class="team">
-        <div class="container section">
+        <div class="container section team__container">
           <p class="pre-text team__pre-text">для настоящих ценителей атмосферы</p>
           <h2 class="section-title team__section-title">Наши мастера</h2>
           <ul class="team__list">
             <li class="team__item">
+					<picture class="team__image">
+					  <source srcset="./img/masters/1-desk-min.jpg 1x, ./img/masters/1-desk@2x-min.jpg 2x" media="(min-width:1280px)">
+					  <source srcset="./img/masters/1-tab-min.jpg 1x, ./img/masters/1-tab@2x-min.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/masters/1-mob-min.jpg 1x, ./img/masters/1-mob@2x-min.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/masters/1-mob-min.jpg" alt="Мастер бритья" />
+				  </picture>
               
-              <img class="team__image" src="./img/masters/master1.jpg" alt="Мастер бритья" />
               <h3 lang="en" class="team__name">John Smith</h3>
               <p lang="en" class="team__profession">Extreme Barber</p>
               <ul class="social">
@@ -270,8 +337,15 @@
                 </li>
               </ul>
             </li>
+
             <li class="team__item">
-              <img class="team__image" src="./img/masters/master2.jpg" alt="Мастер стрижки" />
+					<picture class="team__image">
+					  <source srcset="./img/masters/2-desk-min.jpg 1x, ./img/masters/2-desk@2x-min.jpg 2x" media="(min-width:1280px)">
+					  <source srcset="./img/masters/2-tab-min.jpg 1x, ./img/masters/2-tab@2x-min.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/masters/2-mob-min.jpg 1x, ./img/masters/2-mob@2x-min.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/masters/2-mob-min.jpg" alt="Мастер стрижки" />
+				  </picture>
+              
               <h3 lang="en" class="team__name">Michele Doe</h3>
               <p lang="en" class="team__profession">Extreme Barber</p>
               <ul class="social">
@@ -299,8 +373,15 @@
             </li>
               </ul>
             </li>
+
             <li class="team__item">
-              <img class="team__image" src="./img/masters/master3.jpg" alt="Мастер укладки" />
+					<picture class="team__image">
+					  <source srcset="./img/masters/3-desk-min.jpg 1x, ./img/masters/3-desk@2x-min.jpg 2x" media="(min-width:1280px)">
+					  <source srcset="./img/masters/3-tab-min.jpg 1x, ./img/masters/3-tab@2x-min.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/masters/3-mob-min.jpg 1x, ./img/masters/3-mob@2x-min.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/masters/3-mob-min.jpg" alt="Мастер укладки" />
+				  </picture>
+              
               <h3 lang="en" class="team__name">Alan Black</h3>
               <p lang="en" class="team__profession">Extreme Barber</p>
               <ul class="social">
@@ -346,37 +427,37 @@
 
             <li class="portfolio__item">
               <picture class="portfolio__img">
-					  <source srcset="./img/portfolio/1-desk.jpg 1x, ./img/portfolio/1-desk@2x.jpg 2x" media="(min-width:1200px)">
-					  <source srcset="./img/portfolio/1-tab.jpg 1x, ./img/portfolio/1-tab@2x.jpg 2x" media="(min-width:768px)">
-					  <source srcset="./img/portfolio/1-mob.jpg 1x, ./img/portfolio/1-mob@2x.jpg 2x" media="(max-width:767px)">
-					  <img  src="./img/portfolio/1-mob.jpg" alt="foto-first" />
+					  <source srcset="./img/portfolio/1-desk-min.jpg 1x, ./img/portfolio/1-desk@2x-min.jpg 2x" media="(min-width:1280px)">
+					  <source srcset="./img/portfolio/1-tab-min.jpg 1x, ./img/portfolio/1-tab@2x-min.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/1-mob-min.jpg 1x, ./img/portfolio/1-mob@2x-min.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/1-mob-min.jpg" alt="foto-first" />
 				  </picture>
 				</li>
 
             <li class="portfolio__item">
 					<picture class="portfolio__img">
-					  <source srcset="./img/portfolio/2-desk.jpg 1x, ./img/portfolio/2-desk@2x.jpg 2x" media="(min-width:1200px)">
-					  <source srcset="./img/portfolio/2-tab.jpg 1x, ./img/portfolio/2-tab@2x.jpg 2x" media="(min-width:768px)">
-					  <source srcset="./img/portfolio/2-mob.jpg 1x, ./img/portfolio/2-mob@2x.jpg 2x" media="(max-width:767px)">
-					  <img  src="./img/portfolio/2-mob.jpg" alt="foto-second" />
+					  <source srcset="./img/portfolio/2-desk-min.jpg 1x, ./img/portfolio/2-desk@2x-min.jpg 2x" media="(min-width:1280px)">
+					  <source srcset="./img/portfolio/2-tab-min.jpg 1x, ./img/portfolio/2-tab@2x-min.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/2-mob-min.jpg 1x, ./img/portfolio/2-mob@2x-min.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/2-mob-min.jpg" alt="foto-second" />
 				  </picture>
             </li>
 
             <li class="portfolio__item">
 					<picture class="portfolio__img">
-					  <source srcset="./img/portfolio/3-desk.jpg 1x, ./img/portfolio/3-desk@2x.jpg 2x" media="(min-width:1200px)">
-					  <source srcset="./img/portfolio/3-tab.jpg 1x, ./img/portfolio/3-tab@2x.jpg 2x" media="(min-width:768px)">
-					  <source srcset="./img/portfolio/3-mob.jpg 1x, ./img/portfolio/3-mob@2x.jpg 2x" media="(max-width:767px)">
-					  <img  src="./img/portfolio/3-mob.jpg" alt="foto-third" />
+					  <source srcset="./img/portfolio/3-desk-min.jpg 1x, ./img/portfolio/3-desk@2x-min.jpg 2x" media="(min-width:1280px)">
+					  <source srcset="./img/portfolio/3-tab-min.jpg 1x, ./img/portfolio/3-tab@2x-min.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/3-mob-min.jpg 1x, ./img/portfolio/3-mob@2x-min.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/3-mob-min.jpg" alt="foto-third" />
 				  </picture>
 				</li>
 
             <li class="portfolio__item">
 					<picture class="portfolio__img">
-					  <source srcset="./img/portfolio/4-desk.jpg 1x, ./img/portfolio/4-desk@2x.jpg 2x" media="(min-width:1200px)">
-					  <source srcset="./img/portfolio/4-tab.jpg 1x, ./img/portfolio/4-tab@2x.jpg 2x" media="(min-width:768px)">
-					  <source srcset="./img/portfolio/4-mob.jpg 1x, ./img/portfolio/4-mob@2x.jpg 2x" media="(max-width:767px)">
-					  <img  src="./img/portfolio/4-mob.jpg" alt="foto-fifth" />
+					  <source srcset="./img/portfolio/4-desk-min.jpg 1x, ./img/portfolio/4-desk@2x-min.jpg 2x" media="(min-width:1280px)">
+					  <source srcset="./img/portfolio/4-tab-min.jpg 1x, ./img/portfolio/4-tab@2x-min.jpg 2x" media="(min-width:768px)">
+					  <source srcset="./img/portfolio/4-mob-min.jpg 1x, ./img/portfolio/4-mob@2x-min.jpg 2x" media="(max-width:767px)">
+					  <img  src="./img/portfolio/4-mob-min.jpg" alt="foto-fifth" />
 				  </picture>
 				</li>
           </ul>
@@ -406,7 +487,7 @@
                   <a class="address__link" href="https://goo.gl/maps/LsAVbqvdVWrLiE6S9" target="_blank"
                     rel="noopener noreferrer"><svg class="address__icon" width="24" height="24">
                       <use href="./img/icons.svg#icon-map-pin"></use>
-                    </svg><span>ул. Васильковская, 7А <br />Киев, 08132</span></a>
+                    </svg><span>ул. Васильковская, 7А Киев, 08132</span></a>
                 </li>
                 <li class="address__item">
                   <a class="address__link" href="tel:++380441111111">

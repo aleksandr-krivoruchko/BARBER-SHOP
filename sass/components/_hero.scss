@@ -32,7 +32,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     padding-top: 272px;
     padding-left: 95px;
     background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
@@ -100,7 +100,7 @@
   margin-bottom: 20px;
   color: $text-accent-first-color;
   font-size: 48px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 72px;
   }
 }
@@ -113,7 +113,7 @@
     width: 375px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 18px;
     width: 500px;
   }

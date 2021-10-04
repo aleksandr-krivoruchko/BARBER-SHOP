@@ -46,7 +46,7 @@
   @media screen and (min-width: 768px) {
     padding: 30px 40px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     display: flex;
     padding: 0;
   }
@@ -55,7 +55,7 @@
 .services__list-left,
 .services__list-right {
   width: 100%;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     padding: 30px 40px;
   }
 }
