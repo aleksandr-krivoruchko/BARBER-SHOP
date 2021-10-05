@@ -1,9 +1,144 @@
 .menu-toggle {
-  padding-top: 48px;
-  fill: #fff;
+  position: absolute;
+  top: 48px;
+  right: 31px;
   background-color: transparent;
   border: none;
+  &:hover,
+  &:focus {
+    fill: $text-orange-color;
+    outline: none;
+  }
   @media screen and (min-width: 768px) {
     display: none;
+  }
+}
+
+.menu-container {
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 666;
+  top: 0;
+  right: 0;
+  padding: 118px 40px;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+
+  &.is-open {
+    transform: translateX(0%);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 320px) {
+    padding-left: 12px;
+  }
+}
+
+.mob-nav__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-nav__link {
+  @include text(600, 18px, 1.38, 0.1em, $title-text-color);
+  @include trans(color);
+  display: block;
+
+  &:hover,
+  &:focus {
+    color: $text-orange-color;
+  }
+  &.current {
+    color: $text-orange-color;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 48px;
+  @media screen and (orientation: landscape) {
+    right: 15px;
+    text-align: right;
+  }
+}
+
+.mob-contacts {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.mob-contacts__link {
+  @include text(600, 18px, 1.38, 0.1em, $title-text-color);
+  display: block;
+  &:hover,
+  &:focus {
+    color: $text-orange-color;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+
+    @media screen and(max-width:380px) {
+      font-size: 14px;
+    }
+
+    // @media screen and (min-width: 380px) {
+    //   font-size: 34px;
+    // }
+  }
+}
+
+.mob-contacts__btn {
+  max-width: 194px;
+  height: auto;
+}
+
+.site-nav__icon-close {
+  fill: $main-text-color;
+  text-align: right;
+}
+.site-nav__icon-menu {
+  fill: #ffffff;
+}
+
+.mob-social {
+  text-align: left;
+}
+
+.mob-social__list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.mob-social__item:first-child {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  &::before {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    width: 60px;
+    height: 1px;
+    background-color: #303030;
+    flex-shrink: 0;
+    margin-right: 40px;
+    @media screen and(max-width:350px) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.mob-social__link {
+  @include text(600, 14px, 1.36, 0.2em, $title-text-color);
+
+  &:hover,
+  &:focus {
+    color: $text-orange-color;
   }
 }
