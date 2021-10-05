@@ -56,7 +56,9 @@
   margin-bottom: 44px;
   color: #ffffff;
   outline: none;
-  &:focus {
+  &:focus,
+  &:hover {
+    cursor: pointer;
     border-bottom: 1px solid #ffffff;
     &::placeholder {
       color: #ffffff;
@@ -85,6 +87,7 @@
 
 .online__textarea {
   resize: none;
+  padding-bottom: 40px;
 }
 
 .online__btn {
